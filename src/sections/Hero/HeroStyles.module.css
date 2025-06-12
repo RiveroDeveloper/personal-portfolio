@@ -28,6 +28,8 @@ a{
     width: fit-content;
     align-self: center; 
 }
+
+
 button{
     background-color: var(--btn-color);
     color: var(--btn-text-color);
@@ -66,7 +68,7 @@ button:active {
 }
 
 .description {
-    max-width: 24ch;
+    max-width: 26ch;
 }
 
 .info{

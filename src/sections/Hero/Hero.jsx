@@ -1,33 +1,33 @@
 import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.png";
 import sun from "../../assets/sun.svg";
-import moon from "../../assets/moon.svg"
+import moon from "../../assets/moon.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
-import linkedinDark from "../../assets/linkedin-dark.svg"
-import githubLight from "../../assets/github-light.svg"
-import githubDark from "../../assets/github-dark.svg"
-import CV from "../../assets/cv.pdf"
+import linkedinDark from "../../assets/linkedin-dark.svg";
+import githubLight from "../../assets/github-light.svg";
+import githubDark from "../../assets/github-dark.svg";
+import CV from "../../assets/cv.pdf";
 import { useTheme } from "../common/Theme.Context";
-import { useRef , useEffect} from "react";
+import { useRef, useEffect } from "react";
 import { animateFadeInUp } from "../animations/animations";
 import { animateFadeInRight } from "../animations/animations";
 import { animateFadeInLeft } from "../animations/animations";
 
 function Hero() {
-const { theme, toggleTheme} = useTheme();
-const fadeInUpRef = useRef(null);
-const fadeInRightRef = useRef(null);
-const fadeInLeftRef = useRef(null);
+  const { theme, toggleTheme } = useTheme();
+  const fadeInUpRef = useRef(null);
+  const fadeInRightRef = useRef(null);
+  const fadeInLeftRef = useRef(null);
 
-const themeIcon = theme === 'light' ? sun : moon;
-const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
-const githubIcon = theme === 'light' ? githubLight : githubDark;
+  const themeIcon = theme === "light" ? sun : moon;
+  const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
+  const githubIcon = theme === "light" ? githubLight : githubDark;
 
-useEffect(() => {
-  animateFadeInUp(fadeInUpRef);
-  animateFadeInRight(fadeInRightRef);
-  animateFadeInLeft(fadeInLeftRef);
-}, []);
+  useEffect(() => {
+    animateFadeInUp(fadeInUpRef);
+    animateFadeInRight(fadeInRightRef);
+    animateFadeInLeft(fadeInLeftRef);
+  }, []);
 
   return (
     <section id="hero" className={styles.container}>
@@ -53,16 +53,21 @@ useEffect(() => {
         </h1>
         <h2>Full Stack Developer</h2>
         <span>
-          <a href="https://linkedin.com/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/\samuel-enrique-rivero-urribarr%C3%AD-a7927b363/"
+            target="_blank"
+          >
             <img src={linkedinIcon} alt="Linkedin Icon" />
           </a>
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/SamuelRivero50" target="_blank">
             <img src={githubIcon} alt="Github Icon" />
           </a>
         </span>
-        <p className={styles.description}>Building Full Stack solutions focused on solving real-world problems.</p>
+        <p className={styles.description}>
+          Building Full Stack solutions focused on solving real-world problems.
+        </p>
         <a href={CV} download>
-            <button className="hover">Resume</button>
+          <button className="hover">Resume</button>
         </a>
       </div>
     </section>
