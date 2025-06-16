@@ -1,0 +1,296 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.content {
+  position: relative;
+  background: var(--background-color);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Rubik", sans-serif;
+}
+
+[data-theme="dark"] .content {
+  background: var(--background-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.projectHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+.projectImage {
+  width: 280px;
+  height: 280px;
+  min-width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectImage img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+.projectInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projectInfo h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  font-weight: normal;
+  margin: 0;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.0rem;
+  line-height: 1.6;
+  color: black;
+  opacity: 0.8;
+}
+
+.plus {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: var(--text-color);
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonSecondary:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+}
+
+.githubButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.githubButton:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+  color: #667eea;
+}
+
+.githubButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .projectImage {
+    width: 320px;
+    height: 320px;
+    min-width: 320px;
+  }
+  
+  .projectInfo h1 {
+    font-size: 3rem;
+  }
+  
+  .actions {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    padding: 10px;
+  }
+  
+  .content {
+    border-radius: 16px;
+    max-height: 95vh;
+  }
+  
+  .projectHeader {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .projectImage {
+    width: 240px;
+    height: 240px;
+    min-width: 240px;
+  }
+  
+  .projectInfo {
+    text-align: center;
+  }
+  
+  .projectInfo h1 {
+    font-size: 2rem;
+  }
+  
+  .features {
+    text-align: left;
+  }
+  
+  .actions {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .button,
+  .buttonSecondary {
+    text-align: center;
+    justify-content: center;
+  }
+} 

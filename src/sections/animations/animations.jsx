@@ -253,3 +253,33 @@ export const animateHeroFadeInRight = (ref) => {
         }
     );
 }
+
+// Project modal animations
+export const animateModalIn = (overlayRef, contentRef) => {
+    if (!overlayRef.current || !contentRef.current) return;
+    
+    gsap.fromTo(overlayRef.current, 
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3, ease: 'power2.out' }
+    );
+    gsap.fromTo(contentRef.current,
+        { opacity: 0, scale: 0.8, y: 50 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'power2.out', delay: 0.1 }
+    );
+}
+
+export const animateModalOut = (overlayRef, contentRef, onComplete) => {
+    if (!overlayRef.current || !contentRef.current) return;
+    
+    gsap.to(contentRef.current,
+        { opacity: 0, scale: 0.8, y: 50, duration: 0.3, ease: 'power2.in' }
+    );
+    gsap.to(overlayRef.current,
+        { 
+            opacity: 0, 
+            duration: 0.3, 
+            ease: 'power2.in',
+            onComplete: onComplete
+        }
+    );
+}

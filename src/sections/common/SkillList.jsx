@@ -43,9 +43,10 @@ function SkillList() {
         <SkillItem ref={el => backendSkillRefs.current[2] = { current: el }} icon="php" name="PHP" />
         <SkillItem ref={el => backendSkillRefs.current[3] = { current: el }} icon="mysql" name="MySQL" />
         <SkillItem ref={el => backendSkillRefs.current[4] = { current: el }} icon="postgresql" name="PostgreSQL" />
-        <SkillItem ref={el => backendSkillRefs.current[5] = { current: el }} icon="render" name="Render" />
-        <SkillItem ref={el => backendSkillRefs.current[6] = { current: el }} icon="netlify" name="Netlify" />
-        <SkillItem ref={el => backendSkillRefs.current[7] = { current: el }} icon="firebase" name="Firebase" />
+        <SkillItem ref={el => backendSkillRefs.current[5] = { current: el }} icon="supabase" name="Supabase" />
+        <SkillItem ref={el => backendSkillRefs.current[6] = { current: el }} icon="render" name="Render" />
+        <SkillItem ref={el => backendSkillRefs.current[7] = { current: el }} icon="netlify" name="Netlify" />
+        <SkillItem ref={el => backendSkillRefs.current[8] = { current: el }} icon="firebase" name="Firebase" />
         
         <h2 ref={toolsHeaderRef}>Tools</h2>
         <SkillItem ref={el => toolsSkillRefs.current[0] = { current: el }} icon="git" name="Git" />

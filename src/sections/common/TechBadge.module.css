@@ -1,0 +1,40 @@
+.techBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  font-family: "Roboto Mono", monospace;
+  transition: all 0.2s ease;
+}
+
+.techBadge:hover {
+  background: rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .techBadge {
+  background: rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+[data-theme="dark"] .techBadge:hover {
+  background: rgba(102, 126, 234, 0.25);
+  border-color: rgba(102, 126, 234, 0.4);
+}
+
+.techBadge svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.techBadge span {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85rem;
+} 
