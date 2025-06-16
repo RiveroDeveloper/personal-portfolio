@@ -68,7 +68,8 @@ button:active {
 }
 
 .description {
-    max-width: 26ch;
+    max-width: 27ch;
+    align-self: center;
 }
 
 .info{
