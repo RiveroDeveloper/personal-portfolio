@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my projects and skills as a Fu
 
 ## 🌐 Live Demo
 
-**[View Portfolio]()** <!-- Add your live URL here -->
+**[View Portfolio](https://samuel-rivero-portfolio.netlify.app)** <!-- Replace with your actual Netlify URL -->
 
 ## ✨ Features
 
@@ -18,7 +18,7 @@ A modern, responsive portfolio website showcasing my projects and skills as a Fu
 ## 🛠️ Built With
 
 ### Frontend
-- **React** - UI framework with hooks
+- **React 18** - UI framework with hooks (compatible with tech-stack-icons)
 - **Vite** - Build tool and development server
 - **CSS Modules** - Scoped styling
 - **GSAP** - Professional animations and ScrollTrigger
@@ -62,6 +62,20 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## 🌐 Deployment
+
+This project is configured for easy deployment on Netlify:
+
+1. **Connect Repository**: Link your GitHub repository to Netlify
+2. **Automatic Configuration**: The included `netlify.toml` file handles build settings
+3. **Build Command**: `npm run build`
+4. **Publish Directory**: `dist`
+5. **Node Version**: 18 (for compatibility)
+
+### Deployment Files
+- `netlify.toml` - Netlify build configuration
+- `.npmrc` - NPM dependency resolution settings
 
 ## 📁 Project Structure
 
@@ -133,6 +147,12 @@ Custom GSAP animation library with:
 - **Efficient Re-renders**: Optimized React component updates
 - **Smooth Scrolling**: Hardware-accelerated animations
 
+## 🛠️ Technical Notes
+
+- **React 18 Compatibility**: Uses React 18 for compatibility with tech-stack-icons library
+- **Legacy Peer Dependencies**: Configured to handle dependency resolution conflicts
+- **Build Optimization**: Vite-powered build process with CSS and JS minification
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -141,7 +161,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Samuel Rivero** - Full Stack Developer
 
-- Portfolio: [Add your live URL here]
+- Portfolio: [https://samuel-rivero-portfolio.netlify.app](https://samuel-rivero-portfolio.netlify.app) <!-- Replace with actual URL -->
 - LinkedIn: [samuel-enrique-rivero-urribarrí](https://www.linkedin.com/in/samuel-enrique-rivero-urribarr%C3%AD-a7927b363/)
 - GitHub: [@SamuelRivero50](https://github.com/SamuelRivero50)
 - Email: [Contact through portfolio form]
+
+---
+
+⭐ If you found this portfolio helpful or inspiring, please consider giving it a star!
