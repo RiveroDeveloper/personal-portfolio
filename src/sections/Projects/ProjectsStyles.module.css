@@ -21,6 +21,7 @@ button {
     color: #222;
     transition: transform 200ms ease-in-out;
     border-radius: 16px;
+    opacity: 0;
 
     background: none;
     border: none;

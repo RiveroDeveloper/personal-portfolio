@@ -9,9 +9,9 @@ import githubDark from "../../assets/github-dark.svg";
 import CV from "../../assets/cv.pdf";
 import { useTheme } from "../common/Theme.Context";
 import { useRef, useEffect } from "react";
-import { animateFadeInUp } from "../animations/animations";
-import { animateFadeInRight } from "../animations/animations";
-import { animateFadeInLeft } from "../animations/animations";
+import { animateHeroFadeInUp, animateHeroFadeInRight, animateHeroFadeInLeft } from "../animations/animations";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
@@ -24,9 +24,21 @@ function Hero() {
   const githubIcon = theme === "light" ? githubLight : githubDark;
 
   useEffect(() => {
-    animateFadeInUp(fadeInUpRef);
-    animateFadeInRight(fadeInRightRef);
-    animateFadeInLeft(fadeInLeftRef);
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Set up animations
+    animateHeroFadeInUp(fadeInUpRef);
+    animateHeroFadeInRight(fadeInRightRef);
+    animateHeroFadeInLeft(fadeInLeftRef);
+    
+    // Refresh ScrollTrigger to ensure proper positioning
+    ScrollTrigger.refresh();
+    
+    // Cleanup on unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
