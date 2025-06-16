@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./ProjectsStyles.module.css";
 import cvGenerator from "../../assets/cv-generator.png";
 import serena from "../../assets/serena.png";

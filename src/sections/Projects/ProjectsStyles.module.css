@@ -32,6 +32,7 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+}
 
 .projectsContainer {
     display: flex;
@@ -39,4 +40,12 @@ button:hover {
     align-items: center;
     gap: 20px;
 }
+
+@media (width >= 800px) {
+ .projectsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 30px;
+ }
 }
