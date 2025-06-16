@@ -145,7 +145,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - LinkedIn: [samuel-enrique-rivero-urribarrí](https://www.linkedin.com/in/samuel-enrique-rivero-urribarr%C3%AD-a7927b363/)
 - GitHub: [@SamuelRivero50](https://github.com/SamuelRivero50)
 - Email: [Contact through portfolio form]
-
----
-
-⭐ If you found this portfolio helpful or inspiring, please consider giving it a star!
