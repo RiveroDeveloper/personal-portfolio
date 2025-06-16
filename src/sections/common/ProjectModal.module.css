@@ -246,6 +246,9 @@
   .actions {
     flex-direction: row;
   }
+  .githubButton {
+    align-self: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -292,5 +295,8 @@
   .buttonSecondary {
     text-align: center;
     justify-content: center;
+  }
+  .githubButton {
+    align-self: center;
   }
 } 
