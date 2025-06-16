@@ -4,6 +4,7 @@
   --btn-text-color: #fff;
   --project-card-bg: #ffffff00;
   --text-color: #222;
+  --project-card-text-color: black;
   --form-text-color: #555;
   --footer-text-color: #888;
   --button-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -16,6 +17,7 @@
   --btn-text-color: #222;
   --project-card-bg: #fff;
   --text-color: #fff;
+  --project-card-text-color: #fff;
   --form-text-color: #fff;
   --footer-text-color: #bbb;
   --button-box-shadow: 0 4px 4px rgba(255, 255, 255, 0.107);

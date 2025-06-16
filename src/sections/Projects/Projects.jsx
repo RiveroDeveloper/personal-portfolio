@@ -43,7 +43,7 @@ const projectsData = [
       "Physics-based boat behavior simulation"
     ],
     technologies: ["HTML5", "CSS3","JavaScript", "Node.js", "Express.js", "Socket.io"],
-    liveUrl: "https://serena-boat-interface.netlify.app",
+    liveUrl: "https://serena-boat-interface.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/boat-ui-interface"
   },
   {

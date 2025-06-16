@@ -135,7 +135,7 @@
   gap: 12px;
   font-size: 1.0rem;
   line-height: 1.6;
-  color: black;
+  color: var(--project-card-text-color);
   opacity: 0.8;
 }
 

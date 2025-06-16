@@ -33,9 +33,8 @@ function SkillList() {
         <SkillItem ref={el => frontendSkillRefs.current[1] = { current: el }} icon="css3" name="CSS" />
         <SkillItem ref={el => frontendSkillRefs.current[2] = { current: el }} icon="js" name="JavaScript" />
         <SkillItem ref={el => frontendSkillRefs.current[3] = { current: el }} icon="react" name="React" />
-        <SkillItem ref={el => frontendSkillRefs.current[4] = { current: el }} icon="tailwindcss" name="Tailwind" />
-        <SkillItem ref={el => frontendSkillRefs.current[5] = { current: el }} icon="flutter" name="Flutter" />
-        <SkillItem ref={el => frontendSkillRefs.current[6] = { current: el }} icon="dart" name="Dart" />
+        <SkillItem ref={el => frontendSkillRefs.current[4] = { current: el }} icon="flutter" name="Flutter" />
+        <SkillItem ref={el => frontendSkillRefs.current[5] = { current: el }} icon="dart" name="Dart" />
         
         <h2 ref={backendHeaderRef}>Backend</h2>
         <SkillItem ref={el => backendSkillRefs.current[0] = { current: el }} icon="nodejs" name="Node.js" />
