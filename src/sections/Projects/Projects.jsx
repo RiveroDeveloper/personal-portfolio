@@ -88,7 +88,7 @@ function Projects() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setTimeout(() => setSelectedProject(null), 300); // Delay to allow close animation
+    setTimeout(() => setSelectedProject(null), 300);
   };
 
   return (

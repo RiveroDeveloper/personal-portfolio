@@ -24,18 +24,14 @@ function Hero() {
   const githubIcon = theme === "light" ? githubLight : githubDark;
 
   useEffect(() => {
-    // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
     
-    // Set up animations
     animateHeroFadeInUp(fadeInUpRef);
     animateHeroFadeInRight(fadeInRightRef);
     animateHeroFadeInLeft(fadeInLeftRef);
     
-    // Refresh ScrollTrigger to ensure proper positioning
     ScrollTrigger.refresh();
     
-    // Cleanup on unmount
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };

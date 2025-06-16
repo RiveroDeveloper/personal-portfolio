@@ -19,10 +19,9 @@ export const animateFadeInUp = (ref) => {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ref.current,
-                start: "top 80%",    // Animation starts when element is 80% down the viewport
-                end: "bottom 20%",   // Animation can end when element is 20% up the viewport
-                toggleActions: "play none none reverse", // play on enter, reverse on leave
-                // markers: true,    // Uncomment to see trigger points (for debugging)
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
             }
         }
     );
@@ -47,7 +46,6 @@ export const animateFadeInRight = (ref) => {
                 start: "top 80%",
                 end: "bottom 20%",
                 toggleActions: "play none none reverse",
-                // markers: true,
             }
         }
     );
@@ -72,7 +70,6 @@ export const animateFadeInLeft = (ref) => {
                 start: "top 80%",
                 end: "bottom 20%",
                 toggleActions: "play none none reverse",
-                // markers: true,
             }
         }
     );
@@ -104,7 +101,6 @@ export const animateStaggerIn = (refs) => {
                 start: "top 80%",
                 end: "bottom 20%",
                 toggleActions: "play none none reverse",
-                // markers: true,
             }
         }
     );
@@ -136,7 +132,6 @@ export const animateProjectCards = (refs) => {
             start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play none none reverse",
-            // markers: true,
         }
     });
 }
@@ -163,7 +158,6 @@ export const animateSectionTitle = (ref) => {
                 start: "top 85%",
                 end: "bottom 15%",
                 toggleActions: "play none none reverse",
-                // markers: true,
             }
         }
     );
@@ -190,7 +184,6 @@ export const animateHeroFadeInUp = (ref) => {
                 end: "bottom 0%",
                 toggleActions: "play reverse play reverse",
                 refreshPriority: 1,
-                // markers: true, // Uncomment to debug
             }
         }
     );
@@ -219,7 +212,6 @@ export const animateHeroFadeInLeft = (ref) => {
                 end: "bottom 0%",
                 toggleActions: "play reverse play reverse",
                 refreshPriority: 1,
-                // markers: true,
             }
         }
     );
@@ -248,7 +240,6 @@ export const animateHeroFadeInRight = (ref) => {
                 end: "bottom 0%",
                 toggleActions: "play reverse play reverse",
                 refreshPriority: 1,
-                // markers: true,
             }
         }
     );
