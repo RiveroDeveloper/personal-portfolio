@@ -62,7 +62,7 @@ function Hero() {
         <h2>Full Stack Developer</h2>
         <span>
           <a
-            href="https://www.linkedin.com/in/\samuel-enrique-rivero-urribarr%C3%AD-a7927b363/"
+            href="https://www.linkedin.com/in/rivero-dev/"
             target="_blank"
           >
             <img src={linkedinIcon} alt="Linkedin Icon" />
