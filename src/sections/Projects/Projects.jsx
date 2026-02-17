@@ -62,7 +62,7 @@ const projectsData = [
       "Cross-browser compatibility with Chrome and Edge support"
     ],
     technologies: ["PHP","HTML5","JavaScript", "MySQL"],
-    liveUrl: "http://mvpsinfo.free.nf/?i=1",
+    liveUrl: "https://prospect-audio-filler.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/prospect-audio-filler"
   }
 ];
