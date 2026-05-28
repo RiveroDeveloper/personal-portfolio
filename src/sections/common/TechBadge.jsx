@@ -38,7 +38,9 @@ const techIconMap = {
   'Express.js': 'express',
   'Framer Motion': 'framer',
   'Zustand': 'zustand',
-  'Zod': 'zod'
+  'Zod': 'zod',
+  'Nginx': 'nginx',
+  'C': 'c'
 };
 
 const TechBadge = ({ tech }) => {

@@ -1,6 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import cvGenerator from "../../assets/cv-generator.png";
 import serena from "../../assets/serena.png";
+import netdrive from "../../assets/netdrive.png";
 import crm from "../../assets/crm.png";
 import ProjectCard from "../common/ProjectCard";
 import ProjectModal from "../common/ProjectModal";
@@ -48,6 +49,25 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "NetDrive",
+    subtitle: "Autonomous Vehicle Telemetry System",
+    description: "Full-stack telemetry and control system for an autonomous vehicle. A multi-threaded TCP server in C handles concurrent clients with token-based authentication, while a Node.js WebSocket bridge connects the backend to a vanilla JS web interface deployed on Vercel.",
+    image: netdrive,
+    features: [
+      "Multi-threaded TCP server in C with one thread per client",
+      "Token and role-based authentication (Admin / Observer)",
+      "Live telemetry broadcast every 10 seconds to all authenticated clients",
+      "WebSocket-TCP bridge for real-time browser connectivity",
+      "Admin panel with vehicle control commands (speed, direction)",
+      "Persistent systemd services and Nginx reverse proxy with TLS on VPS",
+      "Environment-based config to avoid hardcoding endpoints in source"
+    ],
+    technologies: ["C", "Node.js", "JavaScript", "WebSocket", "Nginx"],
+    liveUrl: "https://net-drive-kappa.vercel.app/",
+    githubUrl: "https://github.com/RiveroDeveloper/net-drive"
+  },
+  {
+    id: 4,
     title: "CRM LOG",
     subtitle: "Voice Recording MVP",
     description: "CRM system leveraging browser-based voice recognition technology for efficient prospect data entry and activity logging with real-time speech processing.",
@@ -72,13 +92,14 @@ function Projects() {
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
+  const card4Ref = useRef(null);
   
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     animateSectionTitle(titleRef);
-    animateProjectCards([card1Ref, card2Ref, card3Ref]);
+    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref]);
   }, []);
 
   const openProject = (project) => {
@@ -109,9 +130,15 @@ function Projects() {
         />
         <ProjectCard 
           ref={card3Ref} 
+          src={netdrive} 
+          alt="NetDrive" 
+          onClick={() => openProject(projectsData[2])}
+        />
+        <ProjectCard 
+          ref={card4Ref} 
           src={crm} 
           alt="CRM" 
-          onClick={() => openProject(projectsData[2])}
+          onClick={() => openProject(projectsData[3])}
         />
       </div>
       
