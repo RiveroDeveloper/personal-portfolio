@@ -3,6 +3,7 @@ import cvGenerator from "../../assets/cv-generator.png";
 import serena from "../../assets/serena.png";
 import netdrive from "../../assets/netdrive.png";
 import crm from "../../assets/crm.png";
+import cocoaapp from "../../assets/cocoaapp.png";
 import ProjectCard from "../common/ProjectCard";
 import ProjectModal from "../common/ProjectModal";
 import { useRef, useEffect, useState } from "react";
@@ -84,6 +85,24 @@ const projectsData = [
     technologies: ["PHP","HTML5","JavaScript", "MySQL"],
     liveUrl: "https://prospect-audio-filler.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/prospect-audio-filler"
+  },
+  {
+    id: 5,
+    title: "CocoaApp",
+    subtitle: "Smart Cacao Monitoring Platform",
+    description: "Full-stack platform for real-time monitoring of cacao crops. Interactive maps track trees and fruit ripeness, while zone analysis and clustering provide agronomic insights for farmers.",
+    image: cocoaapp,
+    features: [
+      "Interactive leaflet maps with tree and fruit markers",
+      "Fruit ripeness tracking (inmaduro, transición, maduro, enfermo)",
+      "Zone analysis with clustering and automatic notifications",
+      "Agricultural statistics dashboard with visualizations",
+      "Secure authentication and cloud data with Supabase",
+      "FastAPI backend with REST API and profile-based statistics"
+    ],
+    technologies: ["React", "TypeScript", "FastAPI", "Python", "Supabase", "Leaflet"],
+    liveUrl: "https://cocoa-frontend-ytxc.onrender.com/",
+    githubUrl: "https://github.com/RiveroDeveloper/cocoapp"
   }
 ];
 
@@ -93,13 +112,14 @@ function Projects() {
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
   const card4Ref = useRef(null);
+  const card5Ref = useRef(null);
   
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     animateSectionTitle(titleRef);
-    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref]);
+    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref, card5Ref]);
   }, []);
 
   const openProject = (project) => {
@@ -139,6 +159,12 @@ function Projects() {
           src={crm} 
           alt="CRM" 
           onClick={() => openProject(projectsData[3])}
+        />
+        <ProjectCard 
+          ref={card5Ref} 
+          src={cocoaapp} 
+          alt="CocoaApp" 
+          onClick={() => openProject(projectsData[4])}
         />
       </div>
       
