@@ -4,6 +4,7 @@ import serena from "../../assets/serena.png";
 import netdrive from "../../assets/netdrive.png";
 import crm from "../../assets/crm.png";
 import cocoaapp from "../../assets/cocoaapp.png";
+import automatch from "../../assets/automatch.png";
 import ProjectCard from "../common/ProjectCard";
 import ProjectModal from "../common/ProjectModal";
 import { useRef, useEffect, useState } from "react";
@@ -103,6 +104,25 @@ const projectsData = [
     technologies: ["React", "TypeScript", "FastAPI", "Python", "Supabase", "Leaflet"],
     liveUrl: "https://cocoa-frontend-ytxc.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/cocoapp"
+  },
+  {
+    id: 6,
+    title: "AutoMatch",
+    subtitle: "Vehicle Marketplace & Comparison Platform",
+    description: "Full-stack vehicle marketplace with smart search, side-by-side comparison, multi-currency pricing, and PDF/Excel report generation. Built with a React frontend and a Django REST API, deployed in a single container on Render.",
+    image: automatch,
+    features: [
+      "Advanced vehicle search with multi-filter (make, category, year, price)",
+      "Side-by-side vehicle comparison with spec-by-spec breakdown",
+      "Multi-currency support (USD, COP, EUR) with live exchange rates",
+      "PDF and Excel report generation for any vehicle",
+      "JWT authentication with shopping cart functionality",
+      "Full internationalization (English/Spanish) with translation management",
+      "Deployed as a combined Nginx + Django container on Render"
+    ],
+    technologies: ["React", "JavaScript", "Django", "Python", "REST API", "Docker", "Nginx"],
+    liveUrl: "https://automatch-q0b8.onrender.com/",
+    githubUrl: "https://github.com/RiveroDeveloper/auto-match"
   }
 ];
 
@@ -113,13 +133,14 @@ function Projects() {
   const card3Ref = useRef(null);
   const card4Ref = useRef(null);
   const card5Ref = useRef(null);
+  const card6Ref = useRef(null);
   
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     animateSectionTitle(titleRef);
-    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref, card5Ref]);
+    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref, card5Ref, card6Ref]);
   }, []);
 
   const openProject = (project) => {
@@ -165,6 +186,12 @@ function Projects() {
           src={cocoaapp} 
           alt="CocoaApp" 
           onClick={() => openProject(projectsData[4])}
+        />
+        <ProjectCard 
+          ref={card6Ref} 
+          src={automatch} 
+          alt="AutoMatch" 
+          onClick={() => openProject(projectsData[5])}
         />
       </div>
       
