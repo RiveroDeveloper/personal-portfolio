@@ -161,36 +161,48 @@ function Projects() {
           ref={card1Ref} 
           src={cvGenerator} 
           alt="CV Generator" 
+          title={projectsData[0].title}
+          technologies={projectsData[0].technologies}
           onClick={() => openProject(projectsData[0])}
         />
         <ProjectCard 
           ref={card2Ref} 
           src={serena} 
           alt="Serena" 
+          title={projectsData[1].title}
+          technologies={projectsData[1].technologies}
           onClick={() => openProject(projectsData[1])}
         />
         <ProjectCard 
           ref={card3Ref} 
           src={netdrive} 
           alt="NetDrive" 
+          title={projectsData[2].title}
+          technologies={projectsData[2].technologies}
           onClick={() => openProject(projectsData[2])}
         />
         <ProjectCard 
           ref={card4Ref} 
           src={crm} 
           alt="CRM" 
+          title={projectsData[3].title}
+          technologies={projectsData[3].technologies}
           onClick={() => openProject(projectsData[3])}
         />
         <ProjectCard 
           ref={card5Ref} 
           src={cocoaapp} 
           alt="CocoaApp" 
+          title={projectsData[4].title}
+          technologies={projectsData[4].technologies}
           onClick={() => openProject(projectsData[4])}
         />
         <ProjectCard 
           ref={card6Ref} 
           src={automatch} 
           alt="AutoMatch" 
+          title={projectsData[5].title}
+          technologies={projectsData[5].technologies}
           onClick={() => openProject(projectsData[5])}
         />
       </div>

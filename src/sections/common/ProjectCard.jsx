@@ -2,7 +2,7 @@ import React, { forwardRef, useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import styles from '../Projects/ProjectsStyles.module.css'
 
-const ProjectCard = forwardRef(({ src, alt, onClick }, ref) => {
+const ProjectCard = forwardRef(({ src, alt, title, technologies, onClick }, ref) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const ProjectCard = forwardRef(({ src, alt, onClick }, ref) => {
   }, []);
 
   return (
-    <button 
+    <button
       ref={(el) => {
         cardRef.current = el;
         if (ref) {
@@ -48,11 +48,19 @@ const ProjectCard = forwardRef(({ src, alt, onClick }, ref) => {
             ref.current = el;
           }
         }
-      }} 
-      className={styles.projectCard} 
+      }}
+      className={styles.projectCard}
       onClick={onClick}
     >
       <img src={src} alt={alt} />
+      <div className={styles.cardInfo}>
+        <h3 className={styles.cardTitle}>{title}</h3>
+        <div className={styles.cardTech}>
+          {technologies?.map((tech, index) => (
+            <span key={index} className={styles.cardTechItem}>{tech}</span>
+          ))}
+        </div>
+      </div>
     </button>
   );
 });
