@@ -89,7 +89,7 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Cocoapp",
+    title: "CocoaApp",
     subtitle: "Smart Cacao Monitoring Platform",
     description: "Full-stack platform for real-time monitoring of cacao crops. Interactive maps track trees and fruit ripeness, while zone analysis and clustering provide agronomic insights for farmers.",
     image: cocoaapp,
