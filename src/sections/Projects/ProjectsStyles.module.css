@@ -4,83 +4,156 @@
   text-align: center;
 }
 
+/* ─── PROJECT CARD ─── */
 .projectCard {
-  width: fit-content;
-  height: fit-content;
+  width: 280px;
   text-decoration: none;
-  color: #222;
-  border-radius: 16px;
-  background: none;
-  border: none;
+  color: var(--text-color);
+  border-radius: 20px;
+  background: var(--background-color);
+  border: 1.5px solid rgba(128, 128, 128, 0.22);
   padding: 0;
   margin: 0;
-  cursor: pointer;
+  cursor: default;
   opacity: 1;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+[data-theme="dark"] .projectCard {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.projectCard:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  border-color: rgba(128, 128, 128, 0.45);
+}
+
+[data-theme="dark"] .projectCard:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.5);
+}
+
+/* Image area */
+.cardImageWrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.projectCard img {
-  max-width: 250px;
-  max-height: 250px;
-  align-self: center;
-  border-radius: 20px;
+.cardImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-[data-theme="light"] .projectCard img {
-  border: 2px solid #222;
-}
-
+/* Info section */
 .cardInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-top: 12px;
-  max-width: 250px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px 18px;
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+  flex: 1;
 }
 
 .cardTitle {
-  font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--text-color);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .cardTech {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .cardTechItem {
   font-family: "Roboto Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   color: var(--text-color);
-  border: 1px solid var(--text-color);
-  padding: 3px 8px;
-  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  padding: 2px 8px;
+  border-radius: 10px;
   opacity: 0.75;
+  letter-spacing: 0.3px;
 }
 
+.cardDescription {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.75;
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.cardLinks {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.cardLink {
+  color: var(--text-color);
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardLink:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.cardLink svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ─── PROJECTS GRID ─── */
 .projectsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
-@media (width >= 800px) {
+@media (width >= 600px) {
   .projectsContainer {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 0 30px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 20px;
+    gap: 20px;
   }
 }

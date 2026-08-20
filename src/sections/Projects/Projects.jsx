@@ -89,7 +89,7 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "CocoaApp",
+    title: "Cocoapp",
     subtitle: "Smart Cacao Monitoring Platform",
     description: "Full-stack platform for real-time monitoring of cacao crops. Interactive maps track trees and fruit ripeness, while zone analysis and clustering provide agronomic insights for farmers.",
     image: cocoaapp,
@@ -135,23 +135,10 @@ function Projects() {
   const card5Ref = useRef(null);
   const card6Ref = useRef(null);
   
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   useEffect(() => {
     animateSectionTitle(titleRef);
     animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref, card5Ref, card6Ref]);
   }, []);
-
-  const openProject = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedProject(null), 300);
-  };
 
   return (
     <section id="projects" className={styles.container}>
@@ -162,56 +149,62 @@ function Projects() {
           src={cvGenerator} 
           alt="CV Generator" 
           title={projectsData[0].title}
+          description={projectsData[0].description}
           technologies={projectsData[0].technologies}
-          onClick={() => openProject(projectsData[0])}
+          liveUrl={projectsData[0].liveUrl}
+          githubUrl={projectsData[0].githubUrl}
         />
         <ProjectCard 
           ref={card2Ref} 
           src={serena} 
           alt="Serena" 
           title={projectsData[1].title}
+          description={projectsData[1].description}
           technologies={projectsData[1].technologies}
-          onClick={() => openProject(projectsData[1])}
+          liveUrl={projectsData[1].liveUrl}
+          githubUrl={projectsData[1].githubUrl}
         />
         <ProjectCard 
           ref={card3Ref} 
           src={netdrive} 
           alt="NetDrive" 
           title={projectsData[2].title}
+          description={projectsData[2].description}
           technologies={projectsData[2].technologies}
-          onClick={() => openProject(projectsData[2])}
+          liveUrl={projectsData[2].liveUrl}
+          githubUrl={projectsData[2].githubUrl}
         />
         <ProjectCard 
           ref={card4Ref} 
           src={crm} 
           alt="CRM" 
           title={projectsData[3].title}
+          description={projectsData[3].description}
           technologies={projectsData[3].technologies}
-          onClick={() => openProject(projectsData[3])}
+          liveUrl={projectsData[3].liveUrl}
+          githubUrl={projectsData[3].githubUrl}
         />
         <ProjectCard 
           ref={card5Ref} 
           src={cocoaapp} 
-          alt="CocoaApp" 
+          alt="Cocoapp" 
           title={projectsData[4].title}
+          description={projectsData[4].description}
           technologies={projectsData[4].technologies}
-          onClick={() => openProject(projectsData[4])}
+          liveUrl={projectsData[4].liveUrl}
+          githubUrl={projectsData[4].githubUrl}
         />
         <ProjectCard 
           ref={card6Ref} 
           src={automatch} 
           alt="AutoMatch" 
           title={projectsData[5].title}
+          description={projectsData[5].description}
           technologies={projectsData[5].technologies}
-          onClick={() => openProject(projectsData[5])}
+          liveUrl={projectsData[5].liveUrl}
+          githubUrl={projectsData[5].githubUrl}
         />
       </div>
-      
-      <ProjectModal 
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        project={selectedProject}
-      />
     </section>
   );
 }
