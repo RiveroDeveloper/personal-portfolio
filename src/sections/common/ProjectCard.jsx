@@ -40,7 +40,7 @@ const ProjectCard = forwardRef(({ src, alt, title, description, technologies, li
       className={styles.projectCard}
     >
       <div className={styles.cardImageWrapper}>
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} loading="lazy" />
       </div>
       <div className={styles.cardInfo}>
         <div className={styles.cardTech}>

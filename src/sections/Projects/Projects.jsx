@@ -1,10 +1,10 @@
 import styles from "./ProjectsStyles.module.css";
-import cvGenerator from "../../assets/cv-generator.png";
-import serena from "../../assets/serena.png";
-import netdrive from "../../assets/netdrive.png";
-import crm from "../../assets/crm.png";
-import cocoaapp from "../../assets/cocoaapp.png";
-import automatch from "../../assets/automatch.png";
+import cvGenerator from "../../assets/cv-generator.webp";
+import serena from "../../assets/serena.webp";
+import netdrive from "../../assets/netdrive.webp";
+import crm from "../../assets/crm.webp";
+import cocoaapp from "../../assets/cocoaapp.webp";
+import automatch from "../../assets/automatch.webp";
 import ProjectCard from "../common/ProjectCard";
 import ProjectModal from "../common/ProjectModal";
 import { useRef, useEffect, useState } from "react";
