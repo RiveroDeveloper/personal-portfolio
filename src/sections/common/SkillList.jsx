@@ -1,8 +1,70 @@
 import React, { useRef, useEffect } from 'react'
 import StackIcon from "tech-stack-icons";
+import {
+  siHtml5,
+  siJavascript,
+  siTypescript,
+  siReact,
+  siVuedotjs,
+  siTailwindcss,
+  siFlutter,
+  siDart,
+  siNestjs,
+  siExpress,
+  siPython,
+  siDjango,
+  siCplusplus,
+  siPhp,
+  siMysql,
+  siPostgresql,
+  siMongodb,
+  siRedis,
+  siSupabase,
+  siFirebase,
+  siGit,
+  siGithub,
+  siDocker,
+  siRender,
+  siNetlify,
+  siNotion,
+  siFigma,
+} from "simple-icons";
 import styles from "../Skills/SkillsStyles.module.css";
 import { useTheme } from "./Theme.Context";
 import { animateStaggerIn, animateFadeInUp } from "../animations/animations";
+
+// Direct map: tech-stack-icons name -> simple-icons icon.
+// simple-icons renders solid brand colors (no gradient id collisions),
+// which keeps icons crisp in both light and dark themes.
+const SIMPLE_ICONS = {
+  html5: siHtml5,
+  js: siJavascript,
+  typescript: siTypescript,
+  react: siReact,
+  vuejs: siVuedotjs,
+  tailwindcss: siTailwindcss,
+  flutter: siFlutter,
+  dart: siDart,
+  nestjs: siNestjs,
+  expressjs: siExpress,
+  python: siPython,
+  django: siDjango,
+  "c++": siCplusplus,
+  php: siPhp,
+  mysql: siMysql,
+  postgresql: siPostgresql,
+  mongodb: siMongodb,
+  redis: siRedis,
+  supabase: siSupabase,
+  firebase: siFirebase,
+  git: siGit,
+  github: siGithub,
+  docker: siDocker,
+  render: siRender,
+  netlify: siNetlify,
+  notion: siNotion,
+  figma: siFigma,
+};
 
 function SkillList() {
   const frontendHeaderRef = useRef(null);
@@ -79,10 +141,17 @@ function SkillList() {
 const SkillItem = React.forwardRef(({ icon, name }, ref) => {
   const { theme } = useTheme();
   const variant = theme === "dark" ? "dark" : "light";
+  const simpleIcon = SIMPLE_ICONS[icon];
 
   return (
     <div ref={ref} className={styles.skillItem}>
-      <StackIcon name={icon} variant={variant}/>
+      {simpleIcon ? (
+        <svg viewBox="0 0 24 24" fill={simpleIcon.hex} aria-hidden="true">
+          <path d={simpleIcon.path} />
+        </svg>
+      ) : (
+        <StackIcon name={icon} variant={variant}/>
+      )}
       <p>{name}</p>
     </div>
   )
