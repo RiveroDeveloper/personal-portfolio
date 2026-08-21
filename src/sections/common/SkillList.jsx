@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import StackIcon from "tech-stack-icons";
 import styles from "../Skills/SkillsStyles.module.css";
+import { useTheme } from "./Theme.Context";
 import { animateStaggerIn, animateFadeInUp } from "../animations/animations";
 
 function SkillList() {
@@ -76,9 +77,12 @@ function SkillList() {
 }
 
 const SkillItem = React.forwardRef(({ icon, name }, ref) => {
+  const { theme } = useTheme();
+  const variant = theme === "dark" ? "dark" : "light";
+
   return (
     <div ref={ref} className={styles.skillItem}>
-      <StackIcon name={icon}/>
+      <StackIcon name={icon} variant={variant}/>
       <p>{name}</p>
     </div>
   )
