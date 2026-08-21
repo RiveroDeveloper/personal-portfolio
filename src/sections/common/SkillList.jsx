@@ -146,8 +146,8 @@ const SkillItem = React.forwardRef(({ icon, name }, ref) => {
   return (
     <div ref={ref} className={styles.skillItem}>
       {simpleIcon ? (
-        <svg viewBox="0 0 24 24" fill={simpleIcon.hex} aria-hidden="true">
-          <path d={simpleIcon.path} />
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d={simpleIcon.path} fill={simpleIcon.hex} />
         </svg>
       ) : (
         <StackIcon name={icon} variant={variant}/>
