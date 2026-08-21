@@ -17,7 +17,7 @@ const projectsData = [
     id: 1,
     title: "CV Generator",
     subtitle: "Audio-based Resume Generator",
-    description: "Flutter web application that revolutionizes CV creation through AI-powered audio processing and professional PDF generation with modern design.",
+    description: "AI-powered audio CV generator with automatic transcription and PDF export.",
     image: cvGenerator,
     features: [
       "Section-based audio recording with guided system",
@@ -27,7 +27,7 @@ const projectsData = [
       "Secure authentication and cloud storage with Supabase",
       "Modern blue-purple gradient design with Inter typography"
     ],
-    technologies: ["Flutter", "Dart", "JavaScript","Supabase"],
+    technologies: ["Flutter", "Dart", "Supabase", "JavaScript"],
     liveUrl: "https://scanner-6c414.web.app",
     githubUrl: "https://github.com/RiveroDeveloper/audio-based-cv-generator"
   },
@@ -35,7 +35,7 @@ const projectsData = [
     id: 2,
     title: "SERENA",
     subtitle: "Advanced Boat Interface System",
-    description: "Real-time boat monitoring and control interface with comprehensive data simulation for marine navigation and system management.",
+    description: "Real-time boat monitoring interface with GPS, engine diagnostics, and live data simulation.",
     image: serena,
     features: [
       "Real-time GPS navigation with interactive mapping",
@@ -46,7 +46,7 @@ const projectsData = [
       "Live data streaming and real-time control commands",
       "Physics-based boat behavior simulation"
     ],
-    technologies: ["HTML5", "CSS3","JavaScript", "Node.js", "Express.js", "Socket.io"],
+    technologies: ["JavaScript", "Node.js", "Express.js", "Socket.io"],
     liveUrl: "https://serena-boat-interface.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/boat-ui-interface"
   },
@@ -54,7 +54,7 @@ const projectsData = [
     id: 3,
     title: "NetDrive",
     subtitle: "Autonomous Vehicle Telemetry System",
-    description: "Full-stack telemetry and control system for an autonomous vehicle. A multi-threaded TCP server in C handles concurrent clients with token-based authentication, while a Node.js WebSocket bridge connects the backend to a vanilla JS web interface deployed on Vercel.",
+    description: "Autonomous vehicle telemetry with a C TCP server, real-time WebSocket bridge, and live web dashboard.",
     image: netdrive,
     features: [
       "Multi-threaded TCP server in C with one thread per client",
@@ -65,7 +65,7 @@ const projectsData = [
       "Persistent systemd services and Nginx reverse proxy with TLS on VPS",
       "Environment-based config to avoid hardcoding endpoints in source"
     ],
-    technologies: ["C", "Node.js", "JavaScript", "WebSocket", "Nginx"],
+    technologies: ["C", "Node.js", "WebSocket", "Nginx"],
     liveUrl: "https://net-drive-kappa.vercel.app/",
     githubUrl: "https://github.com/RiveroDeveloper/net-drive"
   },
@@ -73,7 +73,7 @@ const projectsData = [
     id: 4,
     title: "CRM LOG",
     subtitle: "Voice Recording MVP",
-    description: "CRM system leveraging browser-based voice recognition technology for efficient prospect data entry and activity logging with real-time speech processing.",
+    description: "CRM with browser-based voice recognition for fast prospect data entry and activity logging.",
     image: crm,
     features: [
       "Web Speech API integration for voice recognition",
@@ -84,7 +84,7 @@ const projectsData = [
       "Production deployment on hosting platform",
       "Cross-browser compatibility with Chrome and Edge support"
     ],
-    technologies: ["PHP","HTML5","JavaScript", "MySQL"],
+    technologies: ["PHP", "JavaScript", "MySQL", "Web Speech API"],
     liveUrl: "https://prospect-audio-filler.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/prospect-audio-filler"
   },
@@ -92,7 +92,7 @@ const projectsData = [
     id: 5,
     title: "CocoaApp",
     subtitle: "Smart Cacao Monitoring Platform",
-    description: "Full-stack platform for real-time monitoring of cacao crops. Interactive maps track trees and fruit ripeness, while zone analysis and clustering provide agronomic insights for farmers.",
+    description: "Cacao crop monitoring with interactive maps, fruit ripeness tracking, and agronomic analytics.",
     image: cocoaapp,
     features: [
       "Interactive leaflet maps with tree and fruit markers",
@@ -102,7 +102,7 @@ const projectsData = [
       "Secure authentication and cloud data with Supabase",
       "FastAPI backend with REST API and profile-based statistics"
     ],
-    technologies: ["React", "TypeScript", "FastAPI", "Python", "Supabase", "Leaflet"],
+    technologies: ["React", "TypeScript", "FastAPI", "Supabase"],
     liveUrl: "https://cocoa-frontend-ytxc.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/cocoapp"
   },
@@ -110,7 +110,7 @@ const projectsData = [
     id: 6,
     title: "AutoMatch",
     subtitle: "Vehicle Marketplace & Comparison Platform",
-    description: "Full-stack vehicle marketplace with smart search, side-by-side comparison, multi-currency pricing, and PDF/Excel report generation. Built with a React frontend and a Django REST API, deployed in a single container on Render.",
+    description: "Vehicle marketplace with smart search, comparison, multi-currency pricing, and PDF/Excel reports.",
     image: automatch,
     features: [
       "Advanced vehicle search with multi-filter (make, category, year, price)",
@@ -121,7 +121,7 @@ const projectsData = [
       "Full internationalization (English/Spanish) with translation management",
       "Deployed as a combined Nginx + Django container on Render"
     ],
-    technologies: ["React", "JavaScript", "Django", "Python", "REST API", "Docker", "Nginx"],
+    technologies: ["React", "Django", "Python", "Docker"],
     liveUrl: "https://automatch-q0b8.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/auto-match"
   },
@@ -129,7 +129,7 @@ const projectsData = [
     id: 7,
     title: "PackTrack",
     subtitle: "Package & Warehouse Monitoring Platform",
-    description: "Full-stack package monitoring dashboard with real-time tracking. A NestJS API with JWT role-based authentication and SQLite persistence powers an interactive Vue 3 SPA with charts, maps, and warehouse management.",
+    description: "Package tracking dashboard with real-time status, warehouse analytics, and interactive maps.",
     image: packtrack,
     features: [
       "Real-time package tracking with detailed timeline and status history",
@@ -140,7 +140,7 @@ const projectsData = [
       "NestJS backend with TypeORM and SQLite persistence",
       "Deployed as a combined Nginx + NestJS + Vue container on Render"
     ],
-    technologies: ["Vue.js", "TypeScript", "NestJS", "Node.js", "SQLite", "Chart.js", "Leaflet", "Docker"],
+    technologies: ["Vue.js", "TypeScript", "NestJS", "SQLite"],
     liveUrl: "https://packtrack-qxr5.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/package-monitor"
   }
