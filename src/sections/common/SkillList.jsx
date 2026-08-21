@@ -19,12 +19,14 @@ function SkillList() {
   const frontendHeaderRef = useRef(null);
   const backendHeaderRef = useRef(null);
   const databasesHeaderRef = useRef(null);
+  const cloudHeaderRef = useRef(null);
   const toolsHeaderRef = useRef(null);
 
   // Refs for skill items to animate them in groups
   const frontendSkillRefs = useRef([]);
   const backendSkillRefs = useRef([]);
   const databasesSkillRefs = useRef([]);
+  const cloudSkillRefs = useRef([]);
   const toolsSkillRefs = useRef([]);
 
   useEffect(() => {
@@ -32,12 +34,14 @@ function SkillList() {
     animateFadeInUp(frontendHeaderRef);
     animateFadeInUp(backendHeaderRef);
     animateFadeInUp(databasesHeaderRef);
+    animateFadeInUp(cloudHeaderRef);
     animateFadeInUp(toolsHeaderRef);
 
     // Animate skill items with stagger
     animateStaggerIn(frontendSkillRefs.current);
     animateStaggerIn(backendSkillRefs.current);
     animateStaggerIn(databasesSkillRefs.current);
+    animateStaggerIn(cloudSkillRefs.current);
     animateStaggerIn(toolsSkillRefs.current);
   }, []);
 
@@ -72,16 +76,22 @@ function SkillList() {
         <SkillItem ref={el => databasesSkillRefs.current[4] = { current: el }} icon="supabase" name="Supabase" />
         <SkillItem ref={el => databasesSkillRefs.current[5] = { current: el }} icon="firebase" name="Firebase" />
         
+        <h2 ref={cloudHeaderRef}>Cloud</h2>
+        <SkillItem ref={el => cloudSkillRefs.current[0] = { current: el }} icon="aws" name="AWS" />
+        <SkillItem ref={el => cloudSkillRefs.current[1] = { current: el }} icon="gcloud" name="Google Cloud" />
+        <SkillItem ref={el => cloudSkillRefs.current[2] = { current: el }} icon="azure" name="Azure" />
+        <SkillItem ref={el => cloudSkillRefs.current[3] = { current: el }} icon="vercel" name="Vercel" />
+        <SkillItem ref={el => cloudSkillRefs.current[4] = { current: el }} icon="render" name="Render" />
+        <SkillItem ref={el => cloudSkillRefs.current[5] = { current: el }} icon="netlify" name="Netlify" />
+        
         <h2 ref={toolsHeaderRef}>Tools</h2>
         <SkillItem ref={el => toolsSkillRefs.current[0] = { current: el }} icon="git" name="Git" />
         <SkillItem ref={el => toolsSkillRefs.current[1] = { current: el }} icon="github" name="GitHub" />
         <SkillItem ref={el => toolsSkillRefs.current[2] = { current: el }} icon="docker" name="Docker" />
-        <SkillItem ref={el => toolsSkillRefs.current[3] = { current: el }} icon="render" name="Render" />
-        <SkillItem ref={el => toolsSkillRefs.current[4] = { current: el }} icon="netlify" name="Netlify" />
-        <SkillItem ref={el => toolsSkillRefs.current[5] = { current: el }} icon="vscode" name="VS Code" />
-        <SkillItem ref={el => toolsSkillRefs.current[6] = { current: el }} icon="notion" name="Notion" />
-        <SkillItem ref={el => toolsSkillRefs.current[7] = { current: el }} icon="figma" name="Figma" />
-        <SkillItem ref={el => toolsSkillRefs.current[8] = { current: el }} icon="ps" name="Photoshop" />
+        <SkillItem ref={el => toolsSkillRefs.current[3] = { current: el }} icon="vscode" name="VS Code" />
+        <SkillItem ref={el => toolsSkillRefs.current[4] = { current: el }} icon="notion" name="Notion" />
+        <SkillItem ref={el => toolsSkillRefs.current[5] = { current: el }} icon="figma" name="Figma" />
+        <SkillItem ref={el => toolsSkillRefs.current[6] = { current: el }} icon="ps" name="Photoshop" />
       </div>
     </div>
   )
