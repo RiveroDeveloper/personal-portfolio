@@ -5,6 +5,7 @@ import netdrive from "../../assets/netdrive.webp";
 import crm from "../../assets/crm.webp";
 import cocoaapp from "../../assets/cocoaapp.webp";
 import automatch from "../../assets/automatch.webp";
+import packtrack from "../../assets/packtrack.webp";
 import ProjectCard from "../common/ProjectCard";
 import ProjectModal from "../common/ProjectModal";
 import { useRef, useEffect, useState } from "react";
@@ -123,6 +124,25 @@ const projectsData = [
     technologies: ["React", "JavaScript", "Django", "Python", "REST API", "Docker", "Nginx"],
     liveUrl: "https://automatch-q0b8.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/auto-match"
+  },
+  {
+    id: 7,
+    title: "PackTrack",
+    subtitle: "Package & Warehouse Monitoring Platform",
+    description: "Full-stack package monitoring dashboard with real-time tracking. A NestJS API with JWT role-based authentication and SQLite persistence powers an interactive Vue 3 SPA with charts, maps, and warehouse management.",
+    image: packtrack,
+    features: [
+      "Real-time package tracking with detailed timeline and status history",
+      "Interactive warehouse capacity management and analytics",
+      "Data visualizations with Chart.js (activity and capacity charts)",
+      "Leaflet maps for geographic package and warehouse view",
+      "JWT authentication with role-based access (User / Admin)",
+      "NestJS backend with TypeORM and SQLite persistence",
+      "Deployed as a combined Nginx + NestJS + Vue container on Render"
+    ],
+    technologies: ["Vue.js", "TypeScript", "NestJS", "Node.js", "SQLite", "Chart.js", "Leaflet", "Docker"],
+    liveUrl: "https://packtrack-qxr5.onrender.com/",
+    githubUrl: "https://github.com/RiveroDeveloper/package-monitor"
   }
 ];
 
@@ -134,10 +154,11 @@ function Projects() {
   const card4Ref = useRef(null);
   const card5Ref = useRef(null);
   const card6Ref = useRef(null);
+  const card7Ref = useRef(null);
   
   useEffect(() => {
     animateSectionTitle(titleRef);
-    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref, card5Ref, card6Ref]);
+    animateProjectCards([card1Ref, card2Ref, card3Ref, card4Ref, card5Ref, card6Ref, card7Ref]);
   }, []);
 
   return (
@@ -203,6 +224,16 @@ function Projects() {
           technologies={projectsData[5].technologies}
           liveUrl={projectsData[5].liveUrl}
           githubUrl={projectsData[5].githubUrl}
+        />
+        <ProjectCard 
+          ref={card7Ref} 
+          src={packtrack} 
+          alt="PackTrack" 
+          title={projectsData[6].title}
+          description={projectsData[6].description}
+          technologies={projectsData[6].technologies}
+          liveUrl={projectsData[6].liveUrl}
+          githubUrl={projectsData[6].githubUrl}
         />
       </div>
     </section>
