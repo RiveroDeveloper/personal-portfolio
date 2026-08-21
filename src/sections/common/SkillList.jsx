@@ -1,70 +1,19 @@
 import React, { useRef, useEffect } from 'react'
 import StackIcon from "tech-stack-icons";
-import {
-  siHtml5,
-  siJavascript,
-  siTypescript,
-  siReact,
-  siVuedotjs,
-  siTailwindcss,
-  siFlutter,
-  siDart,
-  siNestjs,
-  siExpress,
-  siPython,
-  siDjango,
-  siCplusplus,
-  siPhp,
-  siMysql,
-  siPostgresql,
-  siMongodb,
-  siRedis,
-  siSupabase,
-  siFirebase,
-  siGit,
-  siGithub,
-  siDocker,
-  siRender,
-  siNetlify,
-  siNotion,
-  siFigma,
-} from "simple-icons";
 import styles from "../Skills/SkillsStyles.module.css";
 import { useTheme } from "./Theme.Context";
 import { animateStaggerIn, animateFadeInUp } from "../animations/animations";
 
-// Direct map: tech-stack-icons name -> simple-icons icon.
-// simple-icons renders solid brand colors (no gradient id collisions),
-// which keeps icons crisp in both light and dark themes.
-const SIMPLE_ICONS = {
-  html5: siHtml5,
-  js: siJavascript,
-  typescript: siTypescript,
-  react: siReact,
-  vuejs: siVuedotjs,
-  tailwindcss: siTailwindcss,
-  flutter: siFlutter,
-  dart: siDart,
-  nestjs: siNestjs,
-  expressjs: siExpress,
-  python: siPython,
-  django: siDjango,
-  "c++": siCplusplus,
-  php: siPhp,
-  mysql: siMysql,
-  postgresql: siPostgresql,
-  mongodb: siMongodb,
-  redis: siRedis,
-  supabase: siSupabase,
-  firebase: siFirebase,
-  git: siGit,
-  github: siGithub,
-  docker: siDocker,
-  render: siRender,
-  netlify: siNetlify,
-  notion: siNotion,
-  figma: siFigma,
-};
+// Official two-color Python logo (solid fills, no gradient ids), so it stays
+// visible and crisp on both light and dark backgrounds.
+function PythonIcon() {
+  return (
+    <svg viewBox="0 0 256 256" aria-hidden="true">
+      <path fill="#387EB8" d="M126.916 0.072c-64.832 0-60.784 28.115-60.784 28.115l0.072 29.128h61.71v8.745H41.631c0 0-41.584-4.889-41.584 60.5 0 65.389 36.432 63.064 36.432 63.064h21.712v-30.333c0 0-1.236-36.183 37.972-36.183h64.645c0 0 35.518 0.576 35.518-34.603V32.342c0 0 5.253-32.27-50.428-32.27zm-34.277 19.254c6.11 0 11.06 4.95 11.06 11.06 0 6.109-4.95 11.06-11.06 11.06-6.109 0-11.06-4.951-11.06-11.06 0-6.11 4.951-11.06 11.06-11.06z"/>
+      <path fill="#FFD43B" d="M129.085 255.928c64.832 0 60.784-28.115 60.784-28.115l-0.072-29.128h-61.71v-8.745h84.077c0 0 41.584 4.889 41.584-60.5 0-65.389-36.432-63.064-36.432-63.064h-21.712v30.333c0 0 1.236 36.183-37.972 36.183h-64.645c0 0-35.518-0.576-35.518 34.603v54.26c0 0-5.253 32.27 50.428 32.27zm34.279-19.254c-6.11 0-11.06-4.95-11.06-11.06 0-6.109 4.95-11.06 11.06-11.06 6.109 0 11.06 4.951 11.06 11.06 0 6.11-4.951 11.06-11.06 11.06z"/>
+    </svg>
+  );
+}
 
 function SkillList() {
   const frontendHeaderRef = useRef(null);
@@ -141,17 +90,10 @@ function SkillList() {
 const SkillItem = React.forwardRef(({ icon, name }, ref) => {
   const { theme } = useTheme();
   const variant = theme === "dark" ? "dark" : "light";
-  const simpleIcon = SIMPLE_ICONS[icon];
 
   return (
     <div ref={ref} className={styles.skillItem}>
-      {simpleIcon ? (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d={simpleIcon.path} fill={simpleIcon.hex} />
-        </svg>
-      ) : (
-        <StackIcon name={icon} variant={variant}/>
-      )}
+      {icon === "python" ? <PythonIcon/> : <StackIcon name={icon} variant={variant}/>}
       <p>{name}</p>
     </div>
   )
