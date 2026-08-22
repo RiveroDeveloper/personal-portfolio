@@ -15,6 +15,24 @@ import { animateProjectCards, animateSectionTitle } from "../animations/animatio
 const projectsData = [
   {
     id: 1,
+    title: "CocoaApp",
+    subtitle: "Smart Cacao Monitoring Platform",
+    description: "Cacao crop monitoring with interactive maps, fruit ripeness tracking, and agronomic analytics.",
+    image: cocoaapp,
+    features: [
+      "Interactive leaflet maps with tree and fruit markers",
+      "Fruit ripeness tracking (inmaduro, transición, maduro, enfermo)",
+      "Zone analysis with clustering and automatic notifications",
+      "Agricultural statistics dashboard with visualizations",
+      "Secure authentication and cloud data with Supabase",
+      "FastAPI backend with REST API and profile-based statistics"
+    ],
+    technologies: ["React", "TypeScript", "FastAPI", "Supabase"],
+    liveUrl: "https://cocoa-frontend-ytxc.onrender.com/",
+    githubUrl: "https://github.com/RiveroDeveloper/cocoapp"
+  },
+  {
+    id: 2,
     title: "CV Generator",
     subtitle: "Audio-based Resume Generator",
     description: "AI-powered audio CV generator with automatic transcription and PDF export.",
@@ -32,7 +50,7 @@ const projectsData = [
     githubUrl: "https://github.com/RiveroDeveloper/audio-based-cv-generator"
   },
   {
-    id: 2,
+    id: 3,
     title: "SERENA",
     subtitle: "Advanced Boat Interface System",
     description: "Real-time boat monitoring interface with GPS, engine diagnostics, and live data simulation.",
@@ -51,7 +69,7 @@ const projectsData = [
     githubUrl: "https://github.com/RiveroDeveloper/boat-ui-interface"
   },
   {
-    id: 3,
+    id: 4,
     title: "NetDrive",
     subtitle: "Autonomous Vehicle Telemetry System",
     description: "Autonomous vehicle telemetry with a C TCP server, real-time WebSocket bridge, and live web dashboard.",
@@ -70,44 +88,7 @@ const projectsData = [
     githubUrl: "https://github.com/RiveroDeveloper/net-drive"
   },
   {
-    id: 4,
-    title: "CRM LOG",
-    subtitle: "Voice Recording MVP",
-    description: "CRM with browser-based voice recognition for fast prospect data entry and activity logging.",
-    image: crm,
-    features: [
-      "Web Speech API integration for voice recognition",
-      "Individual field dictation with microphone controls",
-      "Sequential 'Dictate All' functionality for complete data entry",
-      "Real-time visual feedback during voice recording sessions",
-      "Local development with MySQL database integration",
-      "Production deployment on hosting platform",
-      "Cross-browser compatibility with Chrome and Edge support"
-    ],
-    technologies: ["PHP", "JavaScript", "MySQL", "Web Speech API"],
-    liveUrl: "https://prospect-audio-filler.onrender.com/",
-    githubUrl: "https://github.com/RiveroDeveloper/prospect-audio-filler"
-  },
-  {
     id: 5,
-    title: "CocoaApp",
-    subtitle: "Smart Cacao Monitoring Platform",
-    description: "Cacao crop monitoring with interactive maps, fruit ripeness tracking, and agronomic analytics.",
-    image: cocoaapp,
-    features: [
-      "Interactive leaflet maps with tree and fruit markers",
-      "Fruit ripeness tracking (inmaduro, transición, maduro, enfermo)",
-      "Zone analysis with clustering and automatic notifications",
-      "Agricultural statistics dashboard with visualizations",
-      "Secure authentication and cloud data with Supabase",
-      "FastAPI backend with REST API and profile-based statistics"
-    ],
-    technologies: ["React", "TypeScript", "FastAPI", "Supabase"],
-    liveUrl: "https://cocoa-frontend-ytxc.onrender.com/",
-    githubUrl: "https://github.com/RiveroDeveloper/cocoapp"
-  },
-  {
-    id: 6,
     title: "AutoMatch",
     subtitle: "Vehicle Marketplace & Comparison Platform",
     description: "Vehicle marketplace with smart search, comparison, multi-currency pricing, and PDF/Excel reports.",
@@ -126,7 +107,7 @@ const projectsData = [
     githubUrl: "https://github.com/RiveroDeveloper/auto-match"
   },
   {
-    id: 7,
+    id: 6,
     title: "PackTrack",
     subtitle: "Package & Warehouse Monitoring Platform",
     description: "Package tracking dashboard with real-time status, warehouse analytics, and interactive maps.",
@@ -143,6 +124,25 @@ const projectsData = [
     technologies: ["Vue.js", "TypeScript", "NestJS", "SQLite"],
     liveUrl: "https://packtrack-qxr5.onrender.com/",
     githubUrl: "https://github.com/RiveroDeveloper/package-monitor"
+  },
+  {
+    id: 7,
+    title: "CRM LOG",
+    subtitle: "Voice Recording MVP",
+    description: "CRM with browser-based voice recognition for fast prospect data entry and activity logging.",
+    image: crm,
+    features: [
+      "Web Speech API integration for voice recognition",
+      "Individual field dictation with microphone controls",
+      "Sequential 'Dictate All' functionality for complete data entry",
+      "Real-time visual feedback during voice recording sessions",
+      "Local development with MySQL database integration",
+      "Production deployment on hosting platform",
+      "Cross-browser compatibility with Chrome and Edge support"
+    ],
+    technologies: ["PHP", "JavaScript", "MySQL", "Web Speech API"],
+    liveUrl: "https://prospect-audio-filler.onrender.com/",
+    githubUrl: "https://github.com/RiveroDeveloper/prospect-audio-filler"
   }
 ];
 
@@ -167,8 +167,8 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard 
           ref={card1Ref} 
-          src={cvGenerator} 
-          alt="CV Generator" 
+          src={cocoaapp} 
+          alt="CocoaApp" 
           title={projectsData[0].title}
           description={projectsData[0].description}
           technologies={projectsData[0].technologies}
@@ -177,8 +177,8 @@ function Projects() {
         />
         <ProjectCard 
           ref={card2Ref} 
-          src={serena} 
-          alt="Serena" 
+          src={cvGenerator} 
+          alt="CV Generator" 
           title={projectsData[1].title}
           description={projectsData[1].description}
           technologies={projectsData[1].technologies}
@@ -187,8 +187,8 @@ function Projects() {
         />
         <ProjectCard 
           ref={card3Ref} 
-          src={netdrive} 
-          alt="NetDrive" 
+          src={serena} 
+          alt="Serena" 
           title={projectsData[2].title}
           description={projectsData[2].description}
           technologies={projectsData[2].technologies}
@@ -197,8 +197,8 @@ function Projects() {
         />
         <ProjectCard 
           ref={card4Ref} 
-          src={crm} 
-          alt="CRM" 
+          src={netdrive} 
+          alt="NetDrive" 
           title={projectsData[3].title}
           description={projectsData[3].description}
           technologies={projectsData[3].technologies}
@@ -207,8 +207,8 @@ function Projects() {
         />
         <ProjectCard 
           ref={card5Ref} 
-          src={cocoaapp} 
-          alt="Cocoapp" 
+          src={automatch} 
+          alt="AutoMatch" 
           title={projectsData[4].title}
           description={projectsData[4].description}
           technologies={projectsData[4].technologies}
@@ -217,8 +217,8 @@ function Projects() {
         />
         <ProjectCard 
           ref={card6Ref} 
-          src={automatch} 
-          alt="AutoMatch" 
+          src={packtrack} 
+          alt="PackTrack" 
           title={projectsData[5].title}
           description={projectsData[5].description}
           technologies={projectsData[5].technologies}
@@ -227,8 +227,8 @@ function Projects() {
         />
         <ProjectCard 
           ref={card7Ref} 
-          src={packtrack} 
-          alt="PackTrack" 
+          src={crm} 
+          alt="CRM LOG" 
           title={projectsData[6].title}
           description={projectsData[6].description}
           technologies={projectsData[6].technologies}
