@@ -4,19 +4,41 @@ import styles from '../Projects/ProjectsStyles.module.css'
 
 const ProjectCard = forwardRef(({ src, alt, title, description, technologies, liveUrl, githubUrl }, ref) => {
   const cardRef = useRef(null);
+  const imgRef = useRef(null);
+  const wrapperRef = useRef(null);
 
   useEffect(() => {
     const element = cardRef.current;
-    if (!element) return;
+    const img = imgRef.current;
+    const wrapper = wrapperRef.current;
+    if (!element || !img || !wrapper) return;
 
     gsap.set(element, { scale: 1 });
 
+    const getScrollAmount = () => {
+      const wrapperH = wrapper.offsetHeight;
+      const imgH = img.offsetHeight;
+      return imgH > wrapperH ? -(imgH - wrapperH) : 0;
+    };
+
+    let scrollTween = null;
+
     const handleMouseEnter = () => {
       gsap.to(element, { scale: 1.03, duration: 0.3, ease: 'power2.out' });
+      const amount = getScrollAmount();
+      if (amount < 0) {
+        scrollTween = gsap.to(img, {
+          y: amount,
+          duration: 4,
+          ease: 'none',
+        });
+      }
     };
 
     const handleMouseLeave = () => {
       gsap.to(element, { scale: 1, duration: 0.3, ease: 'power2.out' });
+      if (scrollTween) scrollTween.kill();
+      gsap.to(img, { y: 0, duration: 0.4, ease: 'power2.out' });
     };
 
     element.addEventListener('mouseenter', handleMouseEnter);
@@ -39,8 +61,9 @@ const ProjectCard = forwardRef(({ src, alt, title, description, technologies, li
       }}
       className={styles.projectCard}
     >
-      <div className={styles.cardImageWrapper}>
-        <img src={src} alt={alt} loading="lazy" />
+      <div ref={wrapperRef} className={styles.cardImageWrapper}>
+        <img src={src} alt="" className={styles.cardImageBg} aria-hidden="true" />
+        <img ref={imgRef} src={src} alt={alt} loading="lazy" className={styles.cardImageMain} />
       </div>
       <div className={styles.cardInfo}>
         <div className={styles.cardTech}>
